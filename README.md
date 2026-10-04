@@ -3,16 +3,19 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: early development (v0.2-dev).** The text engine works, the prologue is translated and
-> a new game can be started in English (name entry, birthday and confirmation screens).
-> The rest of the game is still in Japanese. This patch is meant for testing, not for playing.
+> **Status: early development (v0.3-dev).** The text engine works, the prologue is translated,
+> a new game can be started in English, and the menus, status panel, Yoshio's notebook and most
+> system messages are in English. The main dialogue script is still in Japanese.
+> This patch is meant for testing, not for playing.
 
 | Screen | |
 |---|---|
 | ![Menu](screenshots/01_menu.png) | ![Prologue](screenshots/02_prologue.png) |
 | ![Shiori](screenshots/03_shiori.png) | ![Classroom](screenshots/04_yoshio.png) |
 | ![Name entry](screenshots/05_name_entry.png) | ![Birthday](screenshots/06_birthday.png) |
-| ![Confirmation](screenshots/07_confirm.png) | |
+| ![Confirmation](screenshots/07_confirm.png) | ![Album menu](screenshots/08_album.png) |
+| ![Main screen](screenshots/09_main.png) | ![Profile](screenshots/10_profile.png) |
+| ![Location label](screenshots/11_location.png) | |
 
 ## Progress
 
@@ -23,11 +26,12 @@ from Japanese into English.
 | Prologue | ✅ translated |
 | Speaker names | ✅ translated |
 | Name entry (English letters, 6 characters per name), birthday/confirmation screens | ✅ done |
-| Menus, status screen, calendar | ⬜ planned (milestone 2) |
+| Menus, status panel, Yoshio's notebook (profiles, ratings), system messages, mini-game texts, credits | ✅ done (some screens not yet tested in-game) |
+| Title menu and date panel (graphics) | ⬜ in progress (phase 3) |
 | Main script (all girls and events) | ⬜ 0.4 % |
 | Graphics with Japanese text (title, menus, signs) | ⬜ planned |
 
-Milestones: **M1** prologue playable ✅ → **M2** all menus/UI (in progress) → **M3** full script (alpha) →
+Milestones: **M1** prologue playable ✅ → **M2** all menus/UI (text done, graphics in progress) → **M3** full script (alpha) →
 **M4** graphics → **M5** version 1.0.
 
 ## How to patch
@@ -40,9 +44,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.2-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.3-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `60da008a14b053e4addee2dd27674d7191a87de6`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `c196533c0800a36e734bcb830efddbe2aa5cc5e4`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
@@ -53,6 +57,8 @@ Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to b
 - Birthday/blood type screens and the main game use a pointer: move it with the D-pad, press A on an
   entry, Start to confirm.
 - Names are in Western order (Shiori Fujisaki); honorifics (-kun, -chan, -san) are kept.
+- While the dialogue is still Japanese, your English name is shown inside Japanese lines; some
+  Japanese dialogue choices start with ": " until they are translated.
 
 ## Legal
 
