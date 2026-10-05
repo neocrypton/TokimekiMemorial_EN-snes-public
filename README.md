@@ -3,11 +3,11 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: early development (v0.4-dev).** The text engine works, the prologue is translated,
+> **Status: early development (v0.5-dev).** The text engine works, the prologue is translated,
 > a new game can be started in English, and the menus, status panel, Yoshio's notebook, most
 > system messages, the battle texts and the graphics with Japanese text (title menu, date panel,
-> festival stages, mini-games, signs and banners) are in English. The main dialogue script is
-> still in Japanese. This patch is meant for testing, not for playing.
+> festival stages, mini-games, signs and banners), the mini-game instructions and the speech
+> contest are in English. The main dialogue script is still in Japanese. This patch is meant for testing, not for playing.
 
 | Screen | |
 |---|---|
@@ -21,7 +21,8 @@ from Japanese into English.
 | ![Science club](screenshots/15_science_club.png) | ![Drama club](screenshots/16_drama_club.png) |
 | ![Music club](screenshots/17_music_club.png) | ![String lottery](screenshots/18_lottery.png) |
 | ![Fortune slip](screenshots/19_fortune.png) | ![Three-legged race](screenshots/20_three_legged_race.png) |
-| ![Battle](screenshots/21_battle.png) | |
+| ![Battle](screenshots/21_battle.png) | ![Speech contest](screenshots/22_speech.png) |
+| ![Instructions](screenshots/23_instructions.png) | |
 
 ## Progress
 
@@ -51,9 +52,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.4-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.5-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `d1b6f25ab461f378a3e37057d7b924d9245eeb50`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `20e67bffe7585cede9106a99fe70dfc42c6e2cad`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
