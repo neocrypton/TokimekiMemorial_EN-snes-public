@@ -3,10 +3,11 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: early development (v0.3-dev).** The text engine works, the prologue is translated,
-> a new game can be started in English, and the menus, status panel, Yoshio's notebook and most
-> system messages are in English. The main dialogue script is still in Japanese.
-> This patch is meant for testing, not for playing.
+> **Status: early development (v0.4-dev).** The text engine works, the prologue is translated,
+> a new game can be started in English, and the menus, status panel, Yoshio's notebook, most
+> system messages, the battle texts and the graphics with Japanese text (title menu, date panel,
+> festival stages, mini-games, signs and banners) are in English. The main dialogue script is
+> still in Japanese. This patch is meant for testing, not for playing.
 
 | Screen | |
 |---|---|
@@ -15,7 +16,12 @@ from Japanese into English.
 | ![Name entry](screenshots/05_name_entry.png) | ![Birthday](screenshots/06_birthday.png) |
 | ![Confirmation](screenshots/07_confirm.png) | ![Album menu](screenshots/08_album.png) |
 | ![Main screen](screenshots/09_main.png) | ![Profile](screenshots/10_profile.png) |
-| ![Location label](screenshots/11_location.png) | |
+| ![Location label](screenshots/11_location.png) | ![Title menu](screenshots/12_title_menu.png) |
+| ![Date panel](screenshots/13_date_panel.png) | ![Speech contest](screenshots/14_speech_contest.png) |
+| ![Science club](screenshots/15_science_club.png) | ![Drama club](screenshots/16_drama_club.png) |
+| ![Music club](screenshots/17_music_club.png) | ![String lottery](screenshots/18_lottery.png) |
+| ![Fortune slip](screenshots/19_fortune.png) | ![Three-legged race](screenshots/20_three_legged_race.png) |
+| ![Battle](screenshots/21_battle.png) | |
 
 ## Progress
 
@@ -27,12 +33,13 @@ from Japanese into English.
 | Speaker names | ✅ translated |
 | Name entry (English letters, 6 characters per name), birthday/confirmation screens | ✅ done |
 | Menus, status panel, Yoshio's notebook (profiles, ratings), system messages, mini-game texts, credits | ✅ done (some screens not yet tested in-game) |
-| Title menu and date panel (graphics) | ⬜ in progress (phase 3) |
+| Battle texts (fights in the sub-games and events) | ✅ done |
+| Title menu and date panel (graphics) | ✅ done |
+| Graphics with Japanese text (festival stages, mini-games, signs, banners, award ceremonies) | ✅ done – the logo, the school name plate, the Koshien stadium and the Miss Kirameki poster stay Japanese on purpose |
 | Main script (all girls and events) | ⬜ 0.4 % |
-| Graphics with Japanese text (title, menus, signs) | ⬜ planned |
 
-Milestones: **M1** prologue playable ✅ → **M2** all menus/UI (text done, graphics in progress) → **M3** full script (alpha) →
-**M4** graphics → **M5** version 1.0.
+Milestones: **M1** prologue playable ✅ → **M2** all menus/UI ✅ → **M3** full script (alpha) →
+**M4** graphics (mostly done, see above) → **M5** version 1.0.
 
 ## How to patch
 
@@ -44,9 +51,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.3-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.4-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `c196533c0800a36e734bcb830efddbe2aa5cc5e4`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `d1b6f25ab461f378a3e37057d7b924d9245eeb50`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
@@ -59,6 +66,7 @@ Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to b
 - Names are in Western order (Shiori Fujisaki); honorifics (-kun, -chan, -san) are kept.
 - While the dialogue is still Japanese, your English name is shown inside Japanese lines; some
   Japanese dialogue choices start with ": " until they are translated.
+- The song lyrics shown during the Music Club concert stay Japanese (the songs are instrumental).
 
 ## Legal
 
