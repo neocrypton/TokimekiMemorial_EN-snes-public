@@ -3,11 +3,11 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: early development (v0.5-dev).** The text engine works, the prologue is translated,
-> a new game can be started in English, and the menus, status panel, Yoshio's notebook, most
-> system messages, the battle texts and the graphics with Japanese text (title menu, date panel,
-> festival stages, mini-games, signs and banners), the mini-game instructions and the speech
-> contest are in English. The main dialogue script is still in Japanese. This patch is meant for testing, not for playing.
+> **Status: alpha (v0.6-dev).** The complete dialogue script (all 22,690 event messages) is now
+> translated, together with the menus, status panel, Yoshio's notebook, system messages, battle texts,
+> mini-game instructions, the speech contest and the graphics with Japanese text. This is a first,
+> raw translation that has only been spot-checked in an emulator – expect typos, awkward lines and
+> layout glitches. Bug reports are very welcome.
 
 | Screen | |
 |---|---|
@@ -22,7 +22,9 @@ from Japanese into English.
 | ![Music club](screenshots/17_music_club.png) | ![String lottery](screenshots/18_lottery.png) |
 | ![Fortune slip](screenshots/19_fortune.png) | ![Three-legged race](screenshots/20_three_legged_race.png) |
 | ![Battle](screenshots/21_battle.png) | ![Speech contest](screenshots/22_speech.png) |
-| ![Instructions](screenshots/23_instructions.png) | |
+| ![Instructions](screenshots/23_instructions.png) | ![Library](screenshots/24_library.png) |
+| ![Mio](screenshots/25_mio.png) | ![Choice](screenshots/26_choice.png) |
+| ![Epilogue](screenshots/27_epilogue.png) | |
 
 ## Progress
 
@@ -37,9 +39,10 @@ from Japanese into English.
 | Battle texts (fights in the sub-games and events) | ✅ done |
 | Title menu and date panel (graphics) | ✅ done |
 | Graphics with Japanese text (festival stages, mini-games, signs, banners, award ceremonies) | ✅ done – the logo, the school name plate, the Koshien stadium and the Miss Kirameki poster stay Japanese on purpose |
-| Main script (all girls and events) | ⬜ 0.4 % |
+| Main script (all girls and events, endings, epilogue) | ✅ translated (alpha, raw translation) |
+| Confession scenes at the end (pre-rendered text graphics) | ⬜ still Japanese |
 
-Milestones: **M1** prologue playable ✅ → **M2** all menus/UI ✅ → **M3** full script (alpha) →
+Milestones: **M1** prologue playable ✅ → **M2** all menus/UI ✅ → **M3** full script (alpha) ✅ →
 **M4** graphics (mostly done, see above) → **M5** version 1.0.
 
 ## How to patch
@@ -52,9 +55,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.5-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.6-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `20e67bffe7585cede9106a99fe70dfc42c6e2cad`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `78d00830acaa019dbb00b84d8071e542c4e79cd4`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
@@ -65,8 +68,9 @@ Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to b
 - Birthday/blood type screens and the main game use a pointer: move it with the D-pad, press A on an
   entry, Start to confirm.
 - Names are in Western order (Shiori Fujisaki); honorifics (-kun, -chan, -san) are kept.
-- While the dialogue is still Japanese, your English name is shown inside Japanese lines; some
-  Japanese dialogue choices start with ": " until they are translated.
+- Known issues: the girls' confessions at the end are pre-rendered text graphics and still in
+  Japanese; on a few days the date panel can show garbled digits after scenes with a thought
+  bubble (it fixes itself on the next day).
 - The song lyrics shown during the Music Club concert stay Japanese (the songs are instrumental).
 
 ## Legal
