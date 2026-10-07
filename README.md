@@ -3,7 +3,7 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: alpha (v0.6-dev).** The complete dialogue script (all 22,690 event messages) is now
+> **Status: alpha (v0.6.1-dev).** The complete dialogue script (all 22,690 event messages) is now
 > translated, together with the menus, status panel, Yoshio's notebook, system messages, battle texts,
 > mini-game instructions, the speech contest and the graphics with Japanese text. This is a first,
 > raw translation that has only been spot-checked in an emulator – expect typos, awkward lines and
@@ -55,9 +55,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.6-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.6.1-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `78d00830acaa019dbb00b84d8071e542c4e79cd4`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `d8603733594ee74ba076ba70cbf23f77880ec38c`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
@@ -69,8 +69,7 @@ Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to b
   entry, Start to confirm.
 - Names are in Western order (Shiori Fujisaki); honorifics (-kun, -chan, -san) are kept.
 - Known issues: the girls' confessions at the end are pre-rendered text graphics and still in
-  Japanese; on a few days the date panel can show garbled digits after scenes with a thought
-  bubble (it fixes itself on the next day).
+  Japanese.
 - The song lyrics shown during the Music Club concert stay Japanese (the songs are instrumental).
 
 ## Legal
