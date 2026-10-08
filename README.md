@@ -3,9 +3,10 @@
 Fan translation of Konami's *Tokimeki Memorial: Densetsu no Ki no Shita de* (Super Famicom, 1996)
 from Japanese into English.
 
-> **Status: alpha (v0.6.1-dev).** The complete dialogue script (all 22,690 event messages) is now
-> translated, together with the menus, status panel, Yoshio's notebook, system messages, battle texts,
-> mini-game instructions, the speech contest and the graphics with Japanese text. This is a first,
+> **Status: alpha (v0.6.2-dev).** The complete dialogue script (all 22,690 event messages) and the
+> confession scenes under the Legendary Tree are now translated, together with the menus, status panel,
+> Yoshio's notebook, system messages, battle texts, mini-game instructions, the speech contest and the
+> graphics with Japanese text. This is a first,
 > raw translation that has only been spot-checked in an emulator – expect typos, awkward lines and
 > layout glitches. Bug reports are very welcome.
 
@@ -24,7 +25,8 @@ from Japanese into English.
 | ![Battle](screenshots/21_battle.png) | ![Speech contest](screenshots/22_speech.png) |
 | ![Instructions](screenshots/23_instructions.png) | ![Library](screenshots/24_library.png) |
 | ![Mio](screenshots/25_mio.png) | ![Choice](screenshots/26_choice.png) |
-| ![Epilogue](screenshots/27_epilogue.png) | |
+| ![Epilogue](screenshots/27_epilogue.png) | ![Confession](screenshots/28_confession.png) |
+| ![Confession](screenshots/29_confession_yuina.png) | |
 
 ## Progress
 
@@ -40,7 +42,7 @@ from Japanese into English.
 | Title menu and date panel (graphics) | ✅ done |
 | Graphics with Japanese text (festival stages, mini-games, signs, banners, award ceremonies) | ✅ done – the logo, the school name plate, the Koshien stadium and the Miss Kirameki poster stay Japanese on purpose |
 | Main script (all girls and events, endings, epilogue) | ✅ translated (alpha, raw translation) |
-| Confession scenes at the end (pre-rendered text graphics) | ⬜ still Japanese |
+| Confession scenes under the Legendary Tree (all 13 girls) | ✅ translated |
 
 Milestones: **M1** prologue playable ✅ → **M2** all menus/UI ✅ → **M3** full script (alpha) ✅ →
 **M4** graphics (mostly done, see above) → **M5** version 1.0.
@@ -55,9 +57,9 @@ You need the Japanese ROM (no copier header):
 | CRC32 | `6A3CCEB1` |
 | SHA-1 | `d025db012acc9a35e79991e25eb5a301ea7afdf0` |
 
-Apply `patches/TokimekiMemorial_EN_v0.6.1-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
+Apply `patches/TokimekiMemorial_EN_v0.6.2-dev.bps` with [Floating IPS](https://www.romhacking.net/utilities/1040/)
 or [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) (an `.ips` version is included as well).
-The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `d8603733594ee74ba076ba70cbf23f77880ec38c`.
+The patched ROM is 48 Mbit (ExLoROM) – SHA-1 `8affe1e2aeb6a35cde0690bbc8bea44b5c3acc46`.
 
 Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to be tested.
 
@@ -68,8 +70,8 @@ Tested with: Snes9x. Other emulators and the FXPak Pro / SD2SNES still need to b
 - Birthday/blood type screens and the main game use a pointer: move it with the D-pad, press A on an
   entry, Start to confirm.
 - Names are in Western order (Shiori Fujisaki); honorifics (-kun, -chan, -san) are kept.
-- Known issues: the girls' confessions at the end are pre-rendered text graphics and still in
-  Japanese.
+- Every dialogue message was played once in an emulator: no Japanese text left, overlong lines
+  fixed (v0.6.2-dev). Complete playthroughs have not been done yet.
 - The song lyrics shown during the Music Club concert stay Japanese (the songs are instrumental).
 
 ## Legal
